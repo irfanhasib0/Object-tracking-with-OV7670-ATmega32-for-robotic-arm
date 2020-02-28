@@ -1,0 +1,269 @@
+   1               		.file	"pwm.c"
+   2               	__SREG__ = 0x3f
+   3               	__SP_H__ = 0x3e
+   4               	__SP_L__ = 0x3d
+   5               	__tmp_reg__ = 0
+   6               	__zero_reg__ = 1
+   7               		.global __do_copy_data
+   8               		.global __do_clear_bss
+  16               	.Ltext0:
+  17               	.global	Timer_init
+  19               	Timer_init:
+  20               	.LFB6:
+  21               	.LM1:
+  22               	/* prologue: frame size=0 */
+  23               	/* prologue end (size=0) */
+  24               	.LM2:
+  25               	/* #APP */
+  26 0000 7894      		sei
+  27               	/* #NOAPP */
+  28               	.LBB12:
+  29               	.LBB13:
+  30               	.LBB14:
+  31               	.LBB15:
+  32               	.LM3:
+  33 0002 80E2      		ldi r24,lo8(20000)
+  34 0004 9EE4      		ldi r25,hi8(20000)
+  35               	.LVL0:
+  36               	/* #APP */
+  37 0006 0197      		1: sbiw r24,1
+  38 0008 01F4      		brne 1b
+  39               	/* #NOAPP */
+  40               	.LBE15:
+  41               	.LBE14:
+  42               	.LBE13:
+  43               	.LBE12:
+  44               	.LM4:
+  45 000a 17BC      		out (70)+1-0x20,__zero_reg__
+  46 000c 16BC      		out 70-0x20,__zero_reg__
+  47               	.LM5:
+  48 000e 8FB5      		in r24,79-0x20
+  49               	.LVL1:
+  50 0010 8FBD      		out 79-0x20,r24
+  51               	.LM6:
+  52 0012 8CB5      		in r24,76-0x20
+  53 0014 9DB5      		in r25,(76)+1-0x20
+  54 0016 9DBD      		out (76)+1-0x20,r25
+  55 0018 8CBD      		out 76-0x20,r24
+  56               	.LM7:
+  57 001a 8EB5      		in r24,78-0x20
+  58 001c 8EBD      		out 78-0x20,r24
+  59               	.LM8:
+  60 001e 8CB5      		in r24,76-0x20
+  61 0020 9DB5      		in r25,(76)+1-0x20
+  62 0022 9DBD      		out (76)+1-0x20,r25
+  63 0024 8CBD      		out 76-0x20,r24
+  64               	.LM9:
+  65 0026 83B7      		in r24,83-0x20
+  66 0028 83BF      		out 83-0x20,r24
+  67               	.LM10:
+  68 002a 82B7      		in r24,82-0x20
+  69 002c 82BF      		out 82-0x20,r24
+  70               	.LM11:
+  71 002e 85B5      		in r24,69-0x20
+  72 0030 85BD      		out 69-0x20,r24
+  73               	.LM12:
+  74 0032 84B5      		in r24,68-0x20
+  75 0034 84BD      		out 68-0x20,r24
+  76               	.LM13:
+  77 0036 19BE      		out 89-0x20,__zero_reg__
+  78               	.LM14:
+  79 0038 88B7      		in r24,88-0x20
+  80 003a 8460      		ori r24,lo8(4)
+  81 003c 88BF      		out 88-0x20,r24
+  82               	.LM15:
+  83 003e 88B7      		in r24,88-0x20
+  84 0040 8260      		ori r24,lo8(2)
+  85 0042 88BF      		out 88-0x20,r24
+  86               	.LM16:
+  87 0044 88B7      		in r24,88-0x20
+  88 0046 8068      		ori r24,lo8(-128)
+  89 0048 88BF      		out 88-0x20,r24
+  90               	/* epilogue: frame size=0 */
+  91 004a 0895      		ret
+  92               	/* epilogue end (size=1) */
+  93               	/* function Timer_init size 41 (40) */
+  94               	.LFE6:
+  96               	.global	Timer_1A
+  98               	Timer_1A:
+  99               	.LFB7:
+ 100               	.LM17:
+ 101               	/* prologue: frame size=0 */
+ 102               	/* prologue end (size=0) */
+ 103               	.LVL2:
+ 104               	.LM18:
+ 105 004c 2FEF      		ldi r18,lo8(255)
+ 106 004e 30E0      		ldi r19,hi8(255)
+ 107 0050 37BD      		out (70)+1-0x20,r19
+ 108 0052 26BD      		out 70-0x20,r18
+ 109               	.LM19:
+ 110 0054 9BBD      		out (74)+1-0x20,r25
+ 111 0056 8ABD      		out 74-0x20,r24
+ 112               	.LM20:
+ 113 0058 8FB5      		in r24,79-0x20
+ 114               	.LVL3:
+ 115 005a 826A      		ori r24,lo8(-94)
+ 116 005c 8FBD      		out 79-0x20,r24
+ 117               	.LM21:
+ 118 005e 8EB5      		in r24,78-0x20
+ 119 0060 8B61      		ori r24,lo8(27)
+ 120 0062 8EBD      		out 78-0x20,r24
+ 121               	.LM22:
+ 122 0064 89B7      		in r24,89-0x20
+ 123 0066 8460      		ori r24,lo8(4)
+ 124 0068 89BF      		out 89-0x20,r24
+ 125               	/* epilogue: frame size=0 */
+ 126 006a 0895      		ret
+ 127               	/* epilogue end (size=1) */
+ 128               	/* function Timer_1A size 16 (15) */
+ 129               	.LFE7:
+ 131               	.global	Timer_1B
+ 133               	Timer_1B:
+ 134               	.LFB8:
+ 135               	.LM23:
+ 136               	/* prologue: frame size=0 */
+ 137               	/* prologue end (size=0) */
+ 138               	.LVL4:
+ 139               	.LM24:
+ 140 006c 2FEF      		ldi r18,lo8(255)
+ 141 006e 30E0      		ldi r19,hi8(255)
+ 142 0070 37BD      		out (70)+1-0x20,r19
+ 143 0072 26BD      		out 70-0x20,r18
+ 144               	.LM25:
+ 145 0074 99BD      		out (72)+1-0x20,r25
+ 146 0076 88BD      		out 72-0x20,r24
+ 147               	.LM26:
+ 148 0078 8FB5      		in r24,79-0x20
+ 149               	.LVL5:
+ 150 007a 826A      		ori r24,lo8(-94)
+ 151 007c 8FBD      		out 79-0x20,r24
+ 152               	.LM27:
+ 153 007e 8EB5      		in r24,78-0x20
+ 154 0080 8B61      		ori r24,lo8(27)
+ 155 0082 8EBD      		out 78-0x20,r24
+ 156               	/* epilogue: frame size=0 */
+ 157 0084 0895      		ret
+ 158               	/* epilogue end (size=1) */
+ 159               	/* function Timer_1B size 13 (12) */
+ 160               	.LFE8:
+ 162               	.global	Timer_0
+ 164               	Timer_0:
+ 165               	.LFB9:
+ 166               	.LM28:
+ 167               	/* prologue: frame size=0 */
+ 168               	/* prologue end (size=0) */
+ 169               	.LVL6:
+ 170               	.LM29:
+ 171 0086 2FEF      		ldi r18,lo8(255)
+ 172 0088 30E0      		ldi r19,hi8(255)
+ 173 008a 37BD      		out (70)+1-0x20,r19
+ 174 008c 26BD      		out 70-0x20,r18
+ 175               	.LM30:
+ 176 008e 2FB5      		in r18,79-0x20
+ 177 0090 226A      		ori r18,lo8(-94)
+ 178 0092 2FBD      		out 79-0x20,r18
+ 179               	.LM31:
+ 180 0094 2EB5      		in r18,78-0x20
+ 181 0096 2B61      		ori r18,lo8(27)
+ 182 0098 2EBD      		out 78-0x20,r18
+ 183               	.LM32:
+ 184 009a 29B7      		in r18,89-0x20
+ 185 009c 2460      		ori r18,lo8(4)
+ 186 009e 29BF      		out 89-0x20,r18
+ 187               	.LM33:
+ 188 00a0 8CBF      		out 92-0x20,r24
+ 189               	.LM34:
+ 190 00a2 83B7      		in r24,83-0x20
+ 191               	.LVL7:
+ 192 00a4 8B64      		ori r24,lo8(75)
+ 193 00a6 83BF      		out 83-0x20,r24
+ 194               	/* epilogue: frame size=0 */
+ 195 00a8 0895      		ret
+ 196               	/* epilogue end (size=1) */
+ 197               	/* function Timer_0 size 18 (17) */
+ 198               	.LFE9:
+ 200               	.global	__vector_9
+ 202               	__vector_9:
+ 203               	.LFB10:
+ 204               	.LM35:
+ 205               	/* prologue: frame size=0 */
+ 206 00aa 1F92      		push __zero_reg__
+ 207 00ac 0F92      		push __tmp_reg__
+ 208 00ae 0FB6      		in __tmp_reg__,__SREG__
+ 209 00b0 0F92      		push __tmp_reg__
+ 210 00b2 1124      		clr __zero_reg__
+ 211 00b4 8F93      		push r24
+ 212 00b6 9F93      		push r25
+ 213               	/* prologue end (size=7) */
+ 214               	.LM36:
+ 215 00b8 82B3      		in r24,50-0x20
+ 216 00ba 98E0      		ldi r25,lo8(8)
+ 217 00bc 8927      		eor r24,r25
+ 218 00be 82BB      		out 50-0x20,r24
+ 219               	.LM37:
+ 220 00c0 88B7      		in r24,88-0x20
+ 221 00c2 8260      		ori r24,lo8(2)
+ 222 00c4 88BF      		out 88-0x20,r24
+ 223               	.LM38:
+ 224 00c6 89B7      		in r24,89-0x20
+ 225 00c8 8260      		ori r24,lo8(2)
+ 226 00ca 89BF      		out 89-0x20,r24
+ 227               	.LM39:
+ 228 00cc 12BE      		out 82-0x20,__zero_reg__
+ 229               	/* epilogue: frame size=0 */
+ 230 00ce 9F91      		pop r25
+ 231 00d0 8F91      		pop r24
+ 232 00d2 0F90      		pop __tmp_reg__
+ 233 00d4 0FBE      		out __SREG__,__tmp_reg__
+ 234 00d6 0F90      		pop __tmp_reg__
+ 235 00d8 1F90      		pop __zero_reg__
+ 236 00da 1895      		reti
+ 237               	/* epilogue end (size=7) */
+ 238               	/* function __vector_9 size 25 (11) */
+ 239               	.LFE10:
+ 241               	.global	__vector_10
+ 243               	__vector_10:
+ 244               	.LFB11:
+ 245               	.LM40:
+ 246               	/* prologue: frame size=0 */
+ 247 00dc 1F92      		push __zero_reg__
+ 248 00de 0F92      		push __tmp_reg__
+ 249 00e0 0FB6      		in __tmp_reg__,__SREG__
+ 250 00e2 0F92      		push __tmp_reg__
+ 251 00e4 1124      		clr __zero_reg__
+ 252 00e6 8F93      		push r24
+ 253               	/* prologue end (size=6) */
+ 254               	.LM41:
+ 255 00e8 9398      		cbi 50-0x20,3
+ 256               	.LM42:
+ 257 00ea 89B7      		in r24,89-0x20
+ 258 00ec 8D7F      		andi r24,lo8(-3)
+ 259 00ee 89BF      		out 89-0x20,r24
+ 260               	/* epilogue: frame size=0 */
+ 261 00f0 8F91      		pop r24
+ 262 00f2 0F90      		pop __tmp_reg__
+ 263 00f4 0FBE      		out __SREG__,__tmp_reg__
+ 264 00f6 0F90      		pop __tmp_reg__
+ 265 00f8 1F90      		pop __zero_reg__
+ 266 00fa 1895      		reti
+ 267               	/* epilogue end (size=6) */
+ 268               	/* function __vector_10 size 16 (4) */
+ 269               	.LFE11:
+ 335               	.Letext0:
+DEFINED SYMBOLS
+                            *ABS*:00000000 pwm.c
+C:\Users\USER\AppData\Local\Temp/cc32OMBL.s:2      *ABS*:0000003f __SREG__
+C:\Users\USER\AppData\Local\Temp/cc32OMBL.s:3      *ABS*:0000003e __SP_H__
+C:\Users\USER\AppData\Local\Temp/cc32OMBL.s:4      *ABS*:0000003d __SP_L__
+C:\Users\USER\AppData\Local\Temp/cc32OMBL.s:5      *ABS*:00000000 __tmp_reg__
+C:\Users\USER\AppData\Local\Temp/cc32OMBL.s:6      *ABS*:00000001 __zero_reg__
+C:\Users\USER\AppData\Local\Temp/cc32OMBL.s:19     .text:00000000 Timer_init
+C:\Users\USER\AppData\Local\Temp/cc32OMBL.s:98     .text:0000004c Timer_1A
+C:\Users\USER\AppData\Local\Temp/cc32OMBL.s:133    .text:0000006c Timer_1B
+C:\Users\USER\AppData\Local\Temp/cc32OMBL.s:164    .text:00000086 Timer_0
+C:\Users\USER\AppData\Local\Temp/cc32OMBL.s:202    .text:000000aa __vector_9
+C:\Users\USER\AppData\Local\Temp/cc32OMBL.s:243    .text:000000dc __vector_10
+
+UNDEFINED SYMBOLS
+__do_copy_data
+__do_clear_bss

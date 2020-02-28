@@ -1,0 +1,5 @@
+Low Fuse  0xFF
+High Fuse 0xDA
+Ex        0xFD
+Lock      0xCF
+Calib     0xFFFFFF43
